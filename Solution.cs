@@ -11,11 +11,8 @@ public class Solution {
                 return new int[] { prevValues[difference], i };
             }
             
-            // If prevValues contains the key update the index
-            // otherwise add the key to the prevValues
-            if (prevValues.ContainsKey(nums[i])) {
-                prevValues[nums[i]] = i;
-            } else {
+            // If prevValues does not contain the key add the key to the prevValues
+            if (!prevValues.ContainsKey(nums[i])) {
                 prevValues.Add(nums[i], i);
             }
         }
